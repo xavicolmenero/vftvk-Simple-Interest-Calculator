@@ -11,7 +11,7 @@
             <div>
                 <div class="fielddiv" onmouseleave="instructionsReset()" onmouseover="instructions('Write your total amount. Must be a number greater than 0.')">
                     <label for="principal">Amount</label>
-                    <input type="number" id="principal">
+                    <input type="number" id="principal" onchange="checkPrincipal()">
                         <!--Calls the checkPrincipal function to validate the input. Must be greater than 0-->                         
                 </div>
                 <div class="fielddiv" onmouseleave="instructionsReset()" 
@@ -48,7 +48,7 @@
             </div>
 
             <footer>
-                &#169; Everyone Can Get Rich        
+                &#169; Xavier Colmenero        
             </footer>
         </div>
     </body>
