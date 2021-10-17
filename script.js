@@ -7,7 +7,7 @@ function compute()
         alert("Amount must be positive");
         //Reset the value and returns the focus to the principal field
         document.getElementById("principal").value='';
-        principal.focus(); //Return focus to principal
+        document.getElementById("principal").focus(); //Return focus to principal
     }
     else
     {
