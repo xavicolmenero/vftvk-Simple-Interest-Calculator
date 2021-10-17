@@ -1,12 +1,26 @@
 body {background-color:black;font-family:arial;color:white}
-h1{color:grey;font-family:verdana}
+h1{color:grey;font-family:verdana;font-weight: bold;}
 .maindiv {
     background-color:white;
     color:black;
-    width: 300px;
+    width: 500px;
     padding: 20px;
     border-radius: 25px;
-    margin: auto;
+    align: center;
+    font-family:verdana;
 }
 footer{color:black;font-size: small;}
-label{width: 100px;display: inline-block;}
+label{width: 100px;display: inline-block;padding-top: 3px;}
+strong{color: yellow;}
+.fielddiv {
+    padding-left: 15%;
+    padding-top: 5px;
+}
+.instructions{
+    color: rgb(68, 0, 255);
+    font-size: smaller;
+}
+#instructionsDiv{
+    color: rgb(68, 0, 255);
+    font-size: smaller;
+}

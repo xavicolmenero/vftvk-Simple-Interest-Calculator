@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Simple Interest Calculator</title>
+    <title>Web App – Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
-            <label for="principal">Amount</label>
-            <input type="number" id="principal" onchange="checkPrincipal()" required>  <br/> 
-                    <!--Calls the checkPrincipal function to validate the input. Must be greater than 0-->
-            <label for="rate">Rate</label>
-            <input type="range" onchange="updateRate()" id="rate" min=1 max=20 value=10.25 step=0.25><span id="rate_val">10.25%</span><br/> 
-                    <!--Calls updateRate function to refresh the rate_vale value that is shown. Default is 10.25-->
-            <label for="years">No. of Years</label>
-            <select id="years">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select><br/><br/>
-            <button onclick="compute()">Compute Interest</button><br/><br/>
-                <!--compute function will calculate and show the amount received in the result span element-->       
-            <span id="result"></span>
-            <br/>
+            <div>
+                <div class="fielddiv" onmouseleave="instructionsReset()" onmouseover="instructions('Write your total amount. Must be a number greater than 0.')">
+                    <label for="principal">Amount</label>
+                    <input type="number" id="principal" onchange="checkPrincipal()">
+                        <!--Calls the checkPrincipal function to validate the input. Must be greater than 0-->                         
+                </div>
+                <div class="fielddiv" onmouseleave="instructionsReset()" 
+                    onmouseover="instructions('Select your desired rate or press left or rigth arrow key to change. <br>Value between 1-20. Step of 0.25.')">
+                    <label for="rate">Rate</label>
+                    <input type="range" onchange="updateRate()" id="rate" min=1 max=20 value=10.25 step=0.25><span id="rate_val">10.25%</span><br/> 
+                        <!--Calls updateRate function to refresh the rate_vale value that is shown. Default is 10.25-->
+                </div>  
+                <div class="fielddiv" onmouseleave="instructionsReset()" onmouseover="instructions('Select your desired years. Value between 1 and 10.')">
+                    <label for="years">No. of Years</label>
+                    <select id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select><br/><br/>
+                </div>
+                <div class="fielddiv" id="instructionsDiv">
+                    <span class="instructions" id="amountInstructions">Browse over the fields for more information</span><br/><br/>
+                </div>                
+                <div class="fielddiv" onmouseleave="instructionsReset()" onmouseover="instructions('Press to compute your received interest.')">
+                    <button onclick="compute()">Compute Interest</button><br/><br/>
+                        <!--compute function will calculate and show the amount received in the result span element-->       
+                    <span id="result"></span>
+
+                </div>
+                <br/>
+            </div>
+
             <footer>
-                &#169; This calculator belongs to Xavier Colmenero        
+                &#169; Everyone Can Get Rich        
             </footer>
         </div>
     </body>
