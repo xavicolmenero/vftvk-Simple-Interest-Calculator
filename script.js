@@ -2,7 +2,7 @@ function compute()
 {
     //Calculates the amount that the user will receive. 
     //Shows a text with the with the provided values by the user and the amount received.
-    if (document.getElementById("principal").value == '')  //Validate if it has a value
+    if (parseInt(document.getElementById("principal").value)<=0 || document.getElementById("principal").value=='')  //Validate if it has a value
     {
         alert("Amount must be positive");
         //Reset the value and returns the focus to the principal field
