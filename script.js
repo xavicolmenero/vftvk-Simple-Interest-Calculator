@@ -51,4 +51,4 @@ function instructions(instructions)
 function instructionsReset()
 {
     document.getElementById("amountInstructions").innerHTML = "Browse over the fields for more information";
-}
+} 
