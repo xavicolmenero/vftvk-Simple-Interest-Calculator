@@ -24,5 +24,4 @@ function checkPrincipal()
     if (principalValue<=0) alert("Amount value not valid. Must be greater than 0");
     //Return focus to principal
     principal.focus();
-}   
-        
+}
