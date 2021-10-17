@@ -7,7 +7,7 @@ function compute()
         alert("Amount must be positive");
         //Reset the value and returns the focus to the principal field
         document.getElementById("principal").value='';
-        document.getElementById("principal").focus(); //Return focus to principal
+        principal.focus(); //Return focus to principal
     }
     else
     {
@@ -16,10 +16,10 @@ function compute()
         var years = parseInt(document.getElementById("years").value);
         var interest = principalValue * years * rate /100;
         var year = new Date().getFullYear()+parseInt(years);
-        document.getElementById("result").innerHTML="If you deposit <strong>"+principalValue+
-                "</strong>,\<br\>at an interest rate of <strong>"+rate+
-                "%</strong>\<br\>You will receive an amount of <strong>"+interest+
-                "</strong>,\<br\>in the year <strong>"+year+"<strong>\<br\>"
+        document.getElementById("result").innerHTML="If you deposit <mark>"+principalValue+
+                "</mark>,\<br\>at an interest rate of <mark>"+rate+
+                "%</mark>\<br\>You will receive an amount of <mark>"+interest+
+                "</mark>,\<br\>in the year <mark>"+year+"<mark>\<br\>"
     }
 }
        
