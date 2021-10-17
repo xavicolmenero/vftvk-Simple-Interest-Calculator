@@ -6,7 +6,7 @@ h1{color:grey;font-family:verdana;font-weight: bold;}
     width: 500px;
     padding: 20px;
     border-radius: 25px;
-    align: center;
+    margin: auto;
     font-family:verdana;
 }
 footer{color:black;font-size: small;}
