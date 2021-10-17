@@ -21,7 +21,11 @@ function checkPrincipal()
 {
     //Will check if the principal value is greater than 0. Must convert to an integer to compare to 0.
     var principalValue = parseInt(document.getElementById("principal").value);
-    if (principalValue<=0) alert("Amount value not valid. Must be greater than 0");
-    //Return focus to principal
-    principal.focus();
+    if (principalValue<=0) 
+    {
+        alert("Amount value not valid. Must be greater than 0");
+        console.log("Reset value");
+        document.getElementById("principal").value='';
+        principal.focus(); //Return focus to principal
+    }    
 }
