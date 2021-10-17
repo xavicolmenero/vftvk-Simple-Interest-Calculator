@@ -24,7 +24,7 @@ function checkPrincipal()
     if (principalValue<=0) 
     {
         alert("Amount value not valid. Must be greater than 0");
-        console.log("Reset value");
+        //Reset the value and returns the focus to the principal field
         document.getElementById("principal").value='';
         principal.focus(); //Return focus to principal
     }    
